@@ -1,216 +1,103 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Донати Minecraft</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    header {
-      background: #222;
-      padding: 1rem;
-      text-align: center;
-      font-size: 2rem;
-    }
-
-    nav {
-      background: #333;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: yellow;
-    }
-
-    .donate-container, .socials-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 2rem;
-      gap: 1rem;
-    }
-
-    .donate-card {
-      background: #1e1e1e;
-      border-radius: 10px;
-      width: 200px;
-      padding: 1rem;
-      text-align: center;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .donate-card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .donate-card:hover {
-      transform: scale(1.05);
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .modal-content {
-      background: #222;
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: center;
-      max-width: 300px;
-      width: 90%;
-    }
-
-    .modal-content a {
-      color: #00aced;
-      text-decoration: none;
-    }
-
-    .close {
-      color: red;
-      float: right;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    .footer {
-      background: #222;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .promo-input {
-      margin-top: 1rem;
-      padding: 0.5rem;
-      border-radius: 5px;
-      border: none;
-      width: 80%;
-    }
-
-    .social-card {
-      background: #1e1e1e;
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: center;
-      width: 200px;
-    }
-
-    .social-card img {
-      width: 50px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donat Minecraft | PHONEX</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>Головна</header>
-  <nav>
-    <a href="#donate">Донати</a>
-    <a href="#socials">Всі соцсети</a>
-  </nav>
+  <header>
+    <h1>WELLGRIEF ДОНАТИ</h1>
+    <nav>
+      <a href="#phonex">PHONEX</a>
+      <a href="#legend">LEGEND</a>
+      <a href="#imperator">IMPERATOR</a>
+      <a href="#magma">MAGMA</a>
+      <a href="#razban">Розбан</a>
+      <a href="#razmut">Розмут</a>
+      <a href="#socials">Соцсети</a>
+    </nav>
+  </header>
 
-  <section id="donate" class="donate-container">
-    <div class="donate-card" onclick="openModal('PHONEX', 10, 't.me/normaiii')">
-      <img src="https://via.placeholder.com/200x100/ffff00/000000?text=PHONEX" alt="PHONEX"/>
-      <h3>PHONEX</h3>
-      <p>10 грн</p>
-    </div>
-    <div class="donate-card" onclick="openModal('LEGEND', 15, 't.me/normaiii')">
-      <img src="https://via.placeholder.com/200x100/ffff00/000000?text=LEGEND" alt="LEGEND"/>
-      <h3>LEGEND</h3>
-      <p>15 грн</p>
-    </div>
-    <div class="donate-card" onclick="openModal('IMPERATOR', 20, 't.me/normaiii')">
-      <img src="https://via.placeholder.com/200x100/ff0000/ffffff?text=IMPERATOR" alt="IMPERATOR"/>
-      <h3>IMPERATOR</h3>
-      <p>20 грн</p>
-    </div>
-    <div class="donate-card" onclick="openModal('MAGMA', 40, 't.me/normaiii')">
-      <img src="https://via.placeholder.com/200x100/ffa500/000000?text=MAGMA" alt="MAGMA"/>
-      <h3>MAGMA</h3>
-      <p>40 грн</p>
-    </div>
-    <div class="donate-card" onclick="openModal('РАЗБАН', 15, 't.me/normaiii')">
-      <img src="https://via.placeholder.com/200x100/888888/000000?text=UNBAN" alt="РАЗБАН"/>
-      <h3>РАЗБАН</h3>
-      <p>15 грн</p>
-    </div>
-    <div class="donate-card" onclick="openModal('РАЗМУТ', 10, 't.me/normaiii')">
-      <img src="https://via.placeholder.com/200x100/cccccc/000000?text=UNMUTE" alt="РАЗМУТ"/>
-      <h3>РАЗМУТ</h3>
-      <p>10 грн</p>
-    </div>
-    <div class="donate-card" onclick="window.open('https://t.me/ownermrbro')">
-      <img src="https://via.placeholder.com/200x100/00ffff/000000?text=ЗАЯВКА" alt="ЗАЯВКА"/>
-      <h3>ЗАЯВКА</h3>
-      <p>ВСЕ КИДАТЬ</p>
-    </div>
-  </section>
+  <main>
+    <!-- PHONEX -->
+    <section id="phonex" class="card yellow">
+      <img src="images/phonex.jpg" alt="PHONEX">
+      <h2>PHONEX — 10 грн</h2>
+      <button onclick="showMenu('PHONEX')">Детальніше</button>
+    </section>
 
-  <section id="socials" class="socials-container">
-    <div class="social-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"/>
-      <h4>ТГ Адміна</h4>
-      <a href="https://t.me/ownermrbro" target="_blank">t.me/ownermrbro</a>
-    </div>
-    <div class="social-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"/>
-      <h4>ТГ Овнера</h4>
-      <a href="https://t.me/normaiii" target="_blank">t.me/normaiii</a>
-    </div>
-  </section>
+    <!-- LEGEND -->
+    <section id="legend" class="card yellow">
+      <img src="images/legend.jpg" alt="LEGEND">
+      <h2>LEGEND — 10 грн</h2>
+      <button onclick="showMenu('LEGEND')">Детальніше</button>
+    </section>
 
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="item-name"></h2>
-      <p id="item-price"></p>
-      <p><strong>Спосіб покупки:</strong></p>
-      <input class="promo-input" placeholder="Введи промокод (7%): ownerua"/>
-      <div style="margin-top:10px;">
-        <a id="telegram-link" href="#" target="_blank">Написати в Telegram</a>
+    <!-- IMPERATOR -->
+    <section id="imperator" class="card red">
+      <img src="images/imperator.jpg" alt="IMPERATOR">
+      <h2>IMPERATOR — 20 грн</h2>
+      <button onclick="showMenu('IMPERATOR')">Детальніше</button>
+    </section>
+
+    <!-- MAGMA -->
+    <section id="magma" class="card orange">
+      <img src="images/magma.jpg" alt="MAGMA">
+      <h2>MAGMA — 40 грн</h2>
+      <button onclick="showMenu('MAGMA')">Детальніше</button>
+    </section>
+
+    <!-- Розбан -->
+    <section id="razban" class="card">
+      <img src="images/razban.jpg" alt="Разбан">
+      <h2>Розбан — 15 грн</h2>
+      <button onclick="showMenu('Разбан')">Детальніше</button>
+    </section>
+
+    <!-- Розмут -->
+    <section id="razmut" class="card">
+      <img src="images/razmut.jpg" alt="Розмут">
+      <h2>Розмут — 10 грн</h2>
+      <button onclick="showMenu('Розмут')">Детальніше</button>
+    </section>
+
+    <!-- Соцсети -->
+    <section id="socials">
+      <h2>Соцсети</h2>
+      <div class="socials">
+        <a href="https://t.me/onwermrbro" target="_blank"><img src="images/telegram-icon.png"> ТГ Адміна</a>
+        <a href="https://t.me/normaiii" target="_blank"><img src="images/telegram-icon.png"> ТГ Овнера</a>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <footer class="footer">
-    <p>Цей сайт оновлюється як донати на <strong>wellgrief</strong></p>
+  <footer>
+    <p>Промокод: <strong>onwerua</strong> — знижка 7%</p>
+    <p>Цей сайт оновлюється, як оновлюються донати на <strong>wellgrief</strong></p>
     <p>IP сервера: <strong>wellhorse.aternos.me</strong></p>
+    <a href="https://t.me/ownermrbro" class="apply-btn">Зробити заявку</a>
   </footer>
 
+  <div id="menu" class="side-menu">
+    <h3>Спосіб покупки</h3>
+    <p>Переходь у телеграм:</p>
+    <a href="https://t.me/normaiii" target="_blank">
+      <img src="images/telegram-icon.png"> t.me/normaiii
+    </a>
+    <input type="text" placeholder="Введи промокод">
+    <button onclick="hideMenu()">Закрити</button>
+  </div>
+
   <script>
-    function openModal(name, price, telegram) {
-      document.getElementById('item-name').innerText = name;
-      document.getElementById('item-price').innerText = price + ' грн';
-      document.getElementById('telegram-link').href = 'https://' + telegram;
-      document.getElementById('modal').style.display = 'flex';
+    function showMenu(title) {
+      document.getElementById('menu').style.display = 'block';
     }
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
+
+    function hideMenu() {
+      document.getElementById('menu').style.display = 'none';
     }
   </script>
 </body>
