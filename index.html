@@ -3,102 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donat Minecraft | PHONEX</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Донати Minecraft</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #222;
+      padding: 1rem;
+      font-size: 2rem;
+    }
+    .donate-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .donate-card {
+      background: #1e1e1e;
+      border-radius: 10px;
+      margin: 1rem;
+      padding: 1.5rem;
+      width: 200px;
+      transition: transform 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+    }
+    .donate-card:hover {
+      transform: scale(1.05);
+    }
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .yellow { color: yellow; }
+    .red { color: red; }
+    .orange { color: orange; }
+  </style>
 </head>
 <body>
-
-  <header>
-    <h1>WELLGRIEF ДОНАТИ</h1>
-    <nav>
-      <a href="#phonex">PHONEX</a>
-      <a href="#legend">LEGEND</a>
-      <a href="#imperator">IMPERATOR</a>
-      <a href="#magma">MAGMA</a>
-      <a href="#razban">Розбан</a>
-      <a href="#razmut">Розмут</a>
-      <a href="#socials">Соцсети</a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- PHONEX -->
-    <section id="phonex" class="card yellow">
-      <img src="images/phonex.jpg" alt="PHONEX">
-      <h2>PHONEX — 10 грн</h2>
-      <button onclick="showMenu('PHONEX')">Детальніше</button>
-    </section>
-
-    <!-- LEGEND -->
-    <section id="legend" class="card yellow">
-      <img src="images/legend.jpg" alt="LEGEND">
-      <h2>LEGEND — 10 грн</h2>
-      <button onclick="showMenu('LEGEND')">Детальніше</button>
-    </section>
-
-    <!-- IMPERATOR -->
-    <section id="imperator" class="card red">
-      <img src="images/imperator.jpg" alt="IMPERATOR">
-      <h2>IMPERATOR — 20 грн</h2>
-      <button onclick="showMenu('IMPERATOR')">Детальніше</button>
-    </section>
-
-    <!-- MAGMA -->
-    <section id="magma" class="card orange">
-      <img src="images/magma.jpg" alt="MAGMA">
-      <h2>MAGMA — 40 грн</h2>
-      <button onclick="showMenu('MAGMA')">Детальніше</button>
-    </section>
-
-    <!-- Розбан -->
-    <section id="razban" class="card">
-      <img src="images/razban.jpg" alt="Разбан">
-      <h2>Розбан — 15 грн</h2>
-      <button onclick="showMenu('Разбан')">Детальніше</button>
-    </section>
-
-    <!-- Розмут -->
-    <section id="razmut" class="card">
-      <img src="images/razmut.jpg" alt="Розмут">
-      <h2>Розмут — 10 грн</h2>
-      <button onclick="showMenu('Розмут')">Детальніше</button>
-    </section>
-
-    <!-- Соцсети -->
-    <section id="socials">
-      <h2>Соцсети</h2>
-      <div class="socials">
-        <a href="https://t.me/onwermrbro" target="_blank"><img src="images/telegram-icon.png"> ТГ Адміна</a>
-        <a href="https://t.me/normaiii" target="_blank"><img src="images/telegram-icon.png"> ТГ Овнера</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>Промокод: <strong>onwerua</strong> — знижка 7%</p>
-    <p>Цей сайт оновлюється, як оновлюються донати на <strong>wellgrief</strong></p>
-    <p>IP сервера: <strong>wellhorse.aternos.me</strong></p>
-    <a href="https://t.me/ownermrbro" class="apply-btn">Зробити заявку</a>
-  </footer>
-
-  <div id="menu" class="side-menu">
-    <h3>Спосіб покупки</h3>
-    <p>Переходь у телеграм:</p>
-    <a href="https://t.me/normaiii" target="_blank">
-      <img src="images/telegram-icon.png"> t.me/normaiii
+  <header>Головна</header>
+  <div class="donate-container">
+    <a class="donate-card" href="https://t.me/normaiii">
+      <div class="icon yellow">PHONIX</div>
+      <div>За 10 грн</div>
     </a>
-    <input type="text" placeholder="Введи промокод">
-    <button onclick="hideMenu()">Закрити</button>
+    <a class="donate-card" href="https://t.me/normaiii">
+      <div class="icon yellow">LEGEND</div>
+      <div>За 15 грн</div>
+    </a>
+    <a class="donate-card" href="https://t.me/normaiii">
+      <div class="icon red">IMPERATOR</div>
+      <div>За 20 грн</div>
+    </a>
+    <a class="donate-card" href="https://t.me/normaiii">
+      <div class="icon orange">MAGMA</div>
+      <div>За 50 грн</div>
+    </a>
+    <a class="donate-card" href="https://t.me/normaiii">
+      <div class="icon">РАЗБАН</div>
+      <div>За 15 грн</div>
+    </a>
+    <a class="donate-card" href="https://t.me/normaiii">
+      <div class="icon">РАЗМУТ</div>
+      <div>За 10 грн</div>
+    </a>
+    <a class="donate-card" href="https://t.me/ownermrbro">
+      <div class="icon">ЗАЯВКА</div>
+      <div>ВСЕ КИДАТЬ</div>
+    </a>
   </div>
-
-  <script>
-    function showMenu(title) {
-      document.getElementById('menu').style.display = 'block';
-    }
-
-    function hideMenu() {
-      document.getElementById('menu').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
